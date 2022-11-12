@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Responsive Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#">
+                <img src="logo.png" class="logo">
+                <div class="toggle" onclick="toggleMenu();"></div>
+            </a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2> It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>If you are a coffee lover then you must like Starbucks. You will definitely pick up some pictures when you go to Starbucks. And to upload those pictures to Facebook, Instagram, and other social media profile, you need appropriate quotes and captions. But finding suitable quotes and captions is not an easy task.</p>
+                <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+         <img src="img1.png" class="starbucks">
+        </div>
+        </div>
+        <ul class="thumb">
+            <li><a href="#"><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></a></li>
+            <li><a href="#"><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></a></li>
+            <li><a href="#"><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></a></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></li>
+            <li><a href="#"><img src="twitter.png"></li>
+            <li><a href="#"><img src="instagram.png"></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){   
+          document.querySelector('.starbucks').src =anything;
+        }
+
+        function changeCircleColor(color){
+            const circle=document.querySelector('.circle');
+            circle.style.background=color;
+        }
+
+        function toggleMenu(){
+            var MenuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            MenuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
